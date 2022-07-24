@@ -23,6 +23,10 @@ class Derived: public Base
 { 
     int y; 
     public: 
+    /*
+        ●派生类不继承基类的构造函数和析构函数，但是能调用基类的构造函数和析构函数；
+        ●派生类的构造函数总是先调用基类的构造函数来初始化派生类中的基类成员，再进行派生类中成员的初始化；
+    */
     Derived(int i, int j):Base(i) { y = j; } 
     void fun() { cout << "x = " << x << ", y = " << y; } 
 }; 
